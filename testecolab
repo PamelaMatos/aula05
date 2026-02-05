@@ -1,0 +1,101 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMU3W8b/LUX9swLVQYGjJzF",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/PamelaMatos/aula05/blob/master/testecolab\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Pud1WbdZHWXc",
+        "outputId": "476cac9e-d752-4b90-f240-4bcc52c3263b"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "\n",
+            "Opções\n",
+            "\n",
+            "1 - Par ou Impar\n",
+            "\n",
+            "2 - Verifique o número\n",
+            "\n",
+            "3 - Dobro\n",
+            "Digite uma opção:2\n",
+            "\n",
+            "2 - Verifique o número\n"
+          ]
+        }
+      ],
+      "source": [
+        "print(\"\\nOpções\")\n",
+        "print(\"\\n1 - Par ou Impar\")\n",
+        "print(\"\\n2 - Verifique o número\")\n",
+        "print(\"\\n3 - Dobro\")\n",
+        "\n",
+        "continuar = \"s\"\n",
+        "while continuar == \"s\":\n",
+        "    op = int(input(\"Digite uma opção:\"))\n",
+        "    match op:\n",
+        "        case 1:\n",
+        "            print(\"\\n1 - Par ou Impar\")\n",
+        "            num = int(input(\"Digite um número: \"))\n",
+        "            if num % 2 == 0:\n",
+        "                print(f\"\\n{num} é par\")\n",
+        "            else:\n",
+        "                print(f\"\\n{num} é impar\")\n",
+        "\n",
+        "        case 2:\n",
+        "            print(\"\\n2 - Verifique o número\")\n",
+        "            valor1 = float(input(\"Insira o 1º número: \"))\n",
+        "            valor2 = float(input(\"Insira o 2º número: \"))\n",
+        "            if valor1 > valor2:\n",
+        "                print(\"\\nO maior é: \", valor1)\n",
+        "            elif valor2 > valor1:\n",
+        "                print(\"\\nO maior é: \", valor2)\n",
+        "            else:\n",
+        "                print(\"\\nOs valores são iguais\")\n",
+        "\n",
+        "        case 3:\n",
+        "            print(\"\\n3 - Dobro\")\n",
+        "            num = float(input(\"Digite um número: \"))\n",
+        "            print(f\"O dobro do número é: {num*2}\")\n",
+        "\n",
+        "        case _:\n",
+        "            print(\"Opção inválida!\")\n",
+        "    continuar = input(\"Deseja continuar? (s/n) \").lower().strip() #apaga os espaços _s\n",
+        "    if continuar != \"s\":\n",
+        "        print(\"\\nPrograma Encerrado\")\n",
+        "        break #interromper a linha de comando do case"
+      ]
+    }
+  ]
+}
